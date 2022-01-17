@@ -1,26 +1,24 @@
-def COUNT_MESSAGE_LETTERS(Message):
-    l = 0
-    for A in Message:
-        l=l+1
-    return l
+from typing import List
 
-stringConstant='Ala ma kota'
-
-def ModifyMessageToList(MESSAGE
-          ):
+CONST = 'Ala ma kota'
 
 
+def count_message_letters(message):
+    count = 0
+    for _ in message:
+        count += 1
+    return count
 
 
-    return [Letter+' - '+MESSAGE for Letter in MESSAGE]
+def modify_message_to_list(message: str) -> List[str]:
+    return [letter + ' - ' + message for letter in message]
 
 
-class sample_class:
+class SampleClass:
     some_const = 0
 
-    def __init__(instance):
-        instance.list = []
+    def __init__(self):
+        self.array = []
 
-    def SampleMethod(instance, item):
-        return instance.list.append(item)
-
+    def sample_method(self, item):
+        return self.array.append(item)

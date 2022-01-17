@@ -1,7 +1,7 @@
+# pylint: disable=missing-module-docstring missing-class-docstring missing-function-docstring
 import timeit
 
-class SAMPLE_PYLINT:
-
+class SAMPLE_PYLINT:  # pylint: disable=too-few-public-methods
     def __init__(self, number):
         self._NUMBER = number
 
@@ -43,4 +43,3 @@ if __name__ == '__main__':
 
     obj = children
     obj.some_method(4)
-
