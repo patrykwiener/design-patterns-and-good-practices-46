@@ -31,12 +31,12 @@ class Kia(Car):
 
 
 if __name__ == '__main__':
-    array = [
+    cars = [
         Mercedes(),
         Volvo(),
         Toyota(),
         Kia(),
     ]
 
-    for car in array:
+    for car in cars:
         print(car.get_brand())

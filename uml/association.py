@@ -3,9 +3,12 @@ class Employee:
 
 
 class Company:
-    pass
+    def __init__(self, employee):
+        self.employee = employee
 
 
 if __name__ == '__main__':
     employee = Employee()
-    company = Company()
+    company = Company(employee=employee)
+    t=0
+
