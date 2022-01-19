@@ -20,5 +20,16 @@ class Computer:
     def model(self, value):
         self._model = value
 
-    def search_inventory(self):
+
+class Inventory:
+
+    def search_inventory(self, computer: Computer):
         pass
+
+
+computer = Computer()
+print(computer.brand)
+computer.brand = 'Dell'
+
+inventory = Inventory()
+inventory.search_inventory(computer=computer)
