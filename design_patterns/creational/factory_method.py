@@ -17,6 +17,11 @@ class Boat(Product):
         print(f'Boat delivering...')
 
 
+class Plane(Product):
+    def deliver(self):
+        print(f'Plane delivering...')
+
+
 class Factory(ABC):
 
     def make_and_deliver(self):
@@ -41,9 +46,18 @@ class BoatFactory(Factory):
         return Boat()
 
 
+class PlaneFactory(Factory):
+
+    def create_product(self):
+        return Plane()
+
+
 if __name__ == '__main__':
     truck_factory = TruckFactory()
     truck = truck_factory.make_and_deliver()
 
     boat_factory = BoatFactory()
     boat = boat_factory.make_and_deliver()
+
+    plane_factory = PlaneFactory()
+    plane = plane_factory.make_and_deliver()

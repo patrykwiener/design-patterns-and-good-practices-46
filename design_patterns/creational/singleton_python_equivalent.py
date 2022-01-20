@@ -1,0 +1,3 @@
+DB_PORT = 3467
+DB_PASSWORD = '123qweASD'
+DB_USER = 'patryk'

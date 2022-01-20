@@ -63,3 +63,7 @@ if __name__ == '__main__':
     parent_box.add(box)
     parent_box.add(Car('Burning Orange'))
     parent_box.execute()
+
+    #                 []
+    #         []              car
+    # bike   bike   ball

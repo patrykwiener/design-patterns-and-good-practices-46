@@ -40,8 +40,8 @@ class ChristmasBombsDecorator(BaseDecorator):
         print('Christmas Bombs')
 
     def execute(self):
-        self._extra()
         super().execute()
+        self._extra()
 
 
 class ChristmasStarDecorator(BaseDecorator):
@@ -51,17 +51,21 @@ class ChristmasStarDecorator(BaseDecorator):
         print('Christmas Star')
 
     def execute(self):
-        self._extra()
         super().execute()
+        self._extra()
 
 
 if __name__ == '__main__':
     tree = Tree()
     christmas_lights_decorated = ChristmasLightsDecorator(tree)
+
     christmas_bombs_decorated = ChristmasBombsDecorator(christmas_lights_decorated)
     christmas_bombs_decorated = ChristmasBombsDecorator(christmas_bombs_decorated)
     christmas_bombs_decorated = ChristmasBombsDecorator(christmas_bombs_decorated)
+
     christmas_star_decorated = ChristmasStarDecorator(christmas_bombs_decorated)
+    christmas_star_decorated = ChristmasStarDecorator(christmas_star_decorated)
+
     christmas_star_decorated.execute()
 
     # Christmas Star -> Christmas Bombs -> Christmas Bombs -> Christmas Bombs -> Christmas Lights -> Tree
